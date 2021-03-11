@@ -7,7 +7,7 @@ public class FloodFill{
     int m=s.nextInt();
     int [][]arr=new int[n][m];
     for(int i=0;i<arr.length;i++){
-      for(int j=0;i<arr[0].length;j++){
+      for(int j=0;j<arr[0].length;j++){
         arr[i][j]=s.nextInt();
       }
     }
@@ -15,9 +15,9 @@ public class FloodFill{
     boolean [][]visited=new int [n][m];
     floodfill(arr,0,0," ",visited);
   }
-  public static void floodfill(int [][]maze,int row,int col,String ans,int [][]visited)
+  public static void floodfill(int [][]maze,int row,int col,String ans,boolean [][]visited)
   {
-    if(row<0 || col<0 || row=maze.length || col=maze[0].length || maze[row][col]==1 || visited[row][col]==true)
+    if(row<0 || col<0 || row==maze.length || col==maze[0].length || maze[row][col]==1 || visited[row][col]==true)
     {
       return;
     }
